@@ -1,0 +1,39 @@
+
+#crystalHead {
+    background-color: yellow;
+    padding: 10px;
+}
+
+h1 {
+    font-family: 'ZCOOL KuaiLe', cursive;
+    text-align: center
+}
+
+#story {
+    padding: 10px 100px;
+    font-family: 'Grenze', serif;
+    text-align: center;
+}
+
+#getNumber {
+    color: green;
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.importantText {
+    color: red;
+    font-weight: bold; 
+}
+
+counter {
+    color: blue;
+}
+img {
+    width: 100%;
+}
+
+#banditsHead {
+    background-color: black;
+    color: grey;
+}
