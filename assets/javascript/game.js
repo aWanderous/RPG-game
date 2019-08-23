@@ -1,84 +1,43 @@
 $(document).ready(function() {
-
-  // target randomly generated
-  var target = Math.floor(Math.random() * 120) + 19;
-  $("#getNumber").html(target);
-
-  // button clicked gives a random value for each button pressed
-  var lego = Math.floor(Math.random() * 12) + 1;
-  var plastic = Math.floor(Math.random() * 12) + 1;
-  var stones = Math.floor(Math.random() * 12) + 1;
-  var treasure = Math.floor(Math.random() * 12) + 1;
-  var counter = 0;
-  $("#score").html("Please help!!")
-  $("#collected").html("Please hurry!!")
-  $("#again").html("of my lord's crystals.")
-
-  var wins = 0;
-  var loses = 0;
-  console.log(lego);
-  console.log(plastic);
-  console.log(stones);
-  console.log(treasure);
+  // the player will choose a weapon and will use this for the remainder of the game
   
-  // when boxes are clicked add the value together
-  $("#legoBox, #plasticBox, #stonesBox, #treasureBox").on("click", function () {
-    var buttonId = $(this).attr('id');
+  
+  // The player must then defeat all of the remaining fighters. Enemies should be moved to a different area of the screen.
     
-    switch(buttonId) {
-      case 0:
-      counter = counter + lego;
-      console.log(counter);
-      $("#collected").html("Great!! we have now collected " + counter + "!");
-      
-    
-      case 1:
-      counter = counter + plastic;
-      console.log(counter);
-      $("#collected").html("Great!! we have now collected " + counter + "!");
-      
-      case 2:
-      counter = counter + stones;
-      console.log(counter);
-      $("#collected").html("Great!! we have now collected " + counter + "!");
-      
-      case 3:
-      counter = counter + treasure;
-      console.log(counter);
-      $("#collected").html("Great!! we have now collected " + counter + "!");
-      
-    } 
-    // if the value added together == the same as target number user wins
-    if (counter === target) {
-      wins++
-      reset ();
-      $("#result").html("Well done!! You got the crystals back!")
-    }
-    // if the value does not add up to same target number then the user loses
-    if (counter > target) {
-      loses++
-      reset ();
-      $("#result").html("The bandits have chased you out!!");
-    }
-    
-  });
-  // reset values
-  function reset() {
-    target = Math.floor(Math.random() * 120) + 19;
-    $("#getNumber").html(target);
-   lego = Math.floor(Math.random() * 12) + 1;
-   plastic = Math.floor(Math.random() * 12) + 1;
-   stones = Math.floor(Math.random() * 12) + 1;
-   treasure = Math.floor(Math.random() * 12) + 1;
-   counter = 0;
-   $("#again").html("of my lord's crystals again.")
-   $("#score").html("We have collected back " + wins + " times, but the bandits have beaten us " + loses + " times.");
-   $("#collected").html("If only someone will do something about these bandits.")
-  }
+  // The player chooses an opponent by clicking on an enemy's picture.
+  
+  // Once the player selects an opponent, that enemy is moved to a defender area.
+  
+  // The player will now be able to click the attack button.
+  
+  // Whenever the player clicks attack, their character damages the defender. The opponent will lose HP (health points). 
+  // These points are displayed at the bottom of the defender's picture.
+  // The opponent character will instantly counter the attack. When that happens, the player's character will lose some of their HP. 
+  // These points are shown at the bottom of the player character's picture.
+  
+  // The player will keep hitting the attack button in an effort to defeat their opponent.
   
   
   
   
+  
+  // When the defender's HP is reduced to zero or below, remove the enemy from the defender area. 
+  
+  // The player character can now choose a new opponent.
+  
+  
+  // The player wins the game by defeating all enemy characters. 
+  // The player loses the game the game if their character's HP falls to zero or below.
+
+  
+  // Health Points, Attack Power and Counter Attack Power.
+  
+  
+  // Each time the player attacks, their character's Attack Power increases by its base Attack Power.
+  
+  
+  // The enemy character only has Counter Attack Power.
+  // Unlike the player's Attack Points, Counter Attack Power never changes.
 
 });
 
