@@ -1,7 +1,24 @@
 $(document).ready(function() {
+
+  var myAttack = 0;
+  var chosen;
+  var sword = ;
   // the player will choose a weapon and will use this for the remainder of the game
-  
-  
+  $("#weapon").html("Quick chose your weapon wisely!");
+  function weapon(name, hp, ap, counter, pic) {
+    this.name = name;
+    this.healthPoints = hp;
+    this.attackPower = att;
+    this.counterAttackPower = counter;
+    this.pic = pic;
+
+  $("#sword, #bow, #spear, #daggers").on("click", function () {
+    var button = $(this).attr('id');
+    
+    switch(button) {
+      case "sword":
+        chosen = 
+      break;
   // The player must then defeat all of the remaining fighters. Enemies should be moved to a different area of the screen.
     
   // The player chooses an opponent by clicking on an enemy's picture.
