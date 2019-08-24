@@ -5,7 +5,7 @@ $(document).ready(function() {
   var bandit; // the selected bandit
   
   // the player will choose a weapon and will use this for the remainder of the game
-
+  var sword
   $("#sword, #bow, #spear, #daggers").on("click", function () {
     var button = $(this).attr('id');
     
