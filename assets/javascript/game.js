@@ -12,18 +12,22 @@ $(document).ready(function() {
     switch(button) {
       case "sword":
         chosen = sword;
+        $("#bow, #spear, #daggers").hide();
         console.log(button)
         break;
       case "bow":
         chosen = bow;
+        $("#sword, #spear, #daggers").hide();
         console.log(button)
         break;
       case "spear":
         chosen = spear;
+        $("#sword, #bow, #daggers").hide();
         console.log(button)
         break;
       case "daggers":
         chosen = daggers;
+        $("#sword, #bow, #spear").hide();
         console.log(button)
         break;
     }
