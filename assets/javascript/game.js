@@ -1,26 +1,34 @@
 $(document).ready(function() {
 
-  var myAttack = 0;
-  var chosen;
-  var sword = ;
+  var myAttack = 0; //base attack points
+  var chosen; // the selected weapon
+  var bandit; // the selected bandit
+  
   // the player will choose a weapon and will use this for the remainder of the game
-  $("#weapon").html("Quick chose your weapon wisely!");
-  function weapon(name, hp, ap, counter, pic) {
-    this.name = name;
-    this.healthPoints = hp;
-    this.attackPower = att;
-    this.counterAttackPower = counter;
-    this.pic = pic;
 
   $("#sword, #bow, #spear, #daggers").on("click", function () {
     var button = $(this).attr('id');
     
     switch(button) {
       case "sword":
-        chosen = 
-      break;
+        chosen = sword;
+        console.log(button)
+        break;
+      case "bow":
+        chosen = bow;
+        console.log(button)
+        break;
+      case "spear":
+        chosen = spear;
+        console.log(button)
+        break;
+      case "daggers":
+        chosen = daggers;
+        console.log(button)
+        break;
+    }
+  })
   // The player must then defeat all of the remaining fighters. Enemies should be moved to a different area of the screen.
-    
   // The player chooses an opponent by clicking on an enemy's picture.
   
   // Once the player selects an opponent, that enemy is moved to a defender area.
@@ -55,6 +63,4 @@ $(document).ready(function() {
   
   // The enemy character only has Counter Attack Power.
   // Unlike the player's Attack Points, Counter Attack Power never changes.
-
 });
-
