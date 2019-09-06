@@ -1,11 +1,12 @@
 $(document).ready(function() {
-
+  
   var myAttack = 0; //base attack points
   var chosen; // the selected weapon
   var bandit; // the selected bandit
   
   // the player will choose a weapon and will use this for the remainder of the game
-  var sword
+  $(".warriors").hide(); 
+
   $("#sword, #bow, #spear, #daggers").on("click", function () {
     var button = $(this).attr('id');
     
@@ -13,25 +14,72 @@ $(document).ready(function() {
       case "sword":
         chosen = sword;
         $("#bow, #spear, #daggers").hide();
-        console.log(button)
+        $(".warriors").show();
+        $("#swordWarrior").hide();
+        $("#bowWarrior, #spearWarrior, #daggersWarrior").show();
+        $("#weapon").text("You chose the Sword, excellent choice!")
         break;
       case "bow":
         chosen = bow;
         $("#sword, #spear, #daggers").hide();
-        console.log(button)
+        $(".warriors").show();
+        $("#bowWarrior").hide();
+        $("#swordWarrior, #spearWarrior, #daggersWarrior").show();
+        $("#weapon").text("You chose the Bow, good choice!")
         break;
       case "spear":
         chosen = spear;
         $("#sword, #bow, #daggers").hide();
-        console.log(button)
+        $(".warriors").show();
+        $("#spearWarrior").hide();
+        $("#swordWarrior, #bowWarrior, #daggersWarrior").show();
+        $("#weapon").text("You chose the Spear, great choice!")
         break;
       case "daggers":
         chosen = daggers;
         $("#sword, #bow, #spear").hide();
-        console.log(button)
+        $(".warriors").show();
+        $("#daggersWarrior").hide();
+        $("#swordWarrior, #bowWarrior, #spearWarrior").show();
+        $("#weapon").text("You chose the Daggers, nice choice!")
         break;
     }
-  })
+    $("#swordWarrior, #bowWarrior, #spearWarrior, #daggersWarrior").on("click", function () {
+      var button = $(this).attr('id');
+      
+      switch(button) {
+        case "swordWarrior":
+          chosen = sword;
+          $(".warriors").hide();
+          
+          break;
+        case "bow":
+          chosen = bow;
+          $("#sword, #spear, #daggers").hide();
+          $(".warriors").show();
+          $("#bowWarrior").hide();
+          $("#swordWarrior, #spearWarrior, #daggersWarrior").show();
+          $("#weapon").text("You chose the Bow, good choice!")
+          break;
+        case "spear":
+          chosen = spear;
+          $("#sword, #bow, #daggers").hide();
+          $(".warriors").show();
+          $("#spearWarrior").hide();
+          $("#swordWarrior, #bowWarrior, #daggersWarrior").show();
+          $("#weapon").text("You chose the Spear, great choice!")
+          break;
+        case "daggers":
+          chosen = daggers;
+          $("#sword, #bow, #spear").hide();
+          $(".warriors").show();
+          $("#daggersWarrior").hide();
+          $("#swordWarrior, #bowWarrior, #spearWarrior").show();
+          $("#weapon").text("You chose the Daggers, nice choice!")
+          break;
+      }
+    });
+  });
   // The player must then defeat all of the remaining fighters. Enemies should be moved to a different area of the screen.
   // The player chooses an opponent by clicking on an enemy's picture.
   
